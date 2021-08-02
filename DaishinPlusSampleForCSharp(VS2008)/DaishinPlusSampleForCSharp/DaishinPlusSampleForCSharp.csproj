@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CD7A177-0F03-405D-97E4-D9DE517C11F5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DaishinPlusSampleForCSharp</RootNamespace>
+    <AssemblyName>DaishinPlusSampleForCSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Common\daishin.ico</ApplicationIcon>
+    <StartupObject>DaishinPlusSampleForCSharp.Program</StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ClassUtil.cs" />
+    <Compile Include="Common\DialogConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\DialogConnection.Designer.cs">
+      <DependentUpon>DialogConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FormHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\FormHelp.Designer.cs">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FormWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\FormWeb.Designer.cs">
+      <DependentUpon>FormWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Common\DialogConnection.resx">
+      <DependentUpon>DialogConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\FormHelp.resx">
+      <DependentUpon>FormHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\FormWeb.resx">
+      <DependentUpon>FormWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1100] 시세\Form1101.resx">
+      <DependentUpon>Form1101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1100] 시세\Form1102.resx">
+      <DependentUpon>Form1102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1100] 시세\Form1103.resx">
+      <DependentUpon>Form1103.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1100] 시세\Form1104.resx">
+      <DependentUpon>Form1104.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1100] 시세\Form1105.resx">
+      <DependentUpon>Form1105.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1100] 시세\Form1106.resx">
+      <DependentUpon>Form1106.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1200] 주문\Form1201.resx">
+      <DependentUpon>Form1201.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1200] 주문\Form1202.resx">
+      <DependentUpon>Form1202.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1200] 주문\Form1203.resx">
+      <DependentUpon>Form1203.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1200] 주문\Form1204.resx">
+      <DependentUpon>Form1204.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1200] 주문\Form1205.resx">
+      <DependentUpon>Form1205.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1300] 체결\Form1301.resx">
+      <DependentUpon>Form1301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1300] 체결\Form1302.resx">
+      <DependentUpon>Form1302.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1300] 체결\Form1303.resx">
+      <DependentUpon>Form1303.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1300] 체결\Form1304.resx">
+      <DependentUpon>Form1304.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1400] 잔고\Form1401.resx">
+      <DependentUpon>Form1401.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\[1400] 잔고\Form1402.resx">
+      <DependentUpon>Form1402.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1000] 주식\주식 공통\FormStockCodes.resx">
+      <DependentUpon>FormStockCodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[6000] 종목검색\[6100] 전략조회\Form6101.resx">
+      <DependentUpon>Form6101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[6000] 종목검색\[6200] 전략검색결과\Form6201.resx">
+      <DependentUpon>Form6201.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[6000] 종목검색\[6300] 실시간감시\Form6301.resx">
+      <DependentUpon>Form6301.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1101.Designer.cs">
+      <DependentUpon>Form1101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1102.Designer.cs">
+      <DependentUpon>Form1102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1103.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1103.Designer.cs">
+      <DependentUpon>Form1103.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1104.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1104.Designer.cs">
+      <DependentUpon>Form1104.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1105.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1105.Designer.cs">
+      <DependentUpon>Form1105.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1106.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1100] 시세\Form1106.Designer.cs">
+      <DependentUpon>Form1106.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1200] 주문\Form1201.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1200] 주문\Form1201.Designer.cs">
+      <DependentUpon>Form1201.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1200] 주문\Form1202.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1200] 주문\Form1202.Designer.cs">
+      <DependentUpon>Form1202.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1200] 주문\Form1203.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1200] 주문\Form1203.Designer.cs">
+      <DependentUpon>Form1203.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1200] 주문\Form1204.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1200] 주문\Form1204.Designer.cs">
+      <DependentUpon>Form1204.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1200] 주문\Form1205.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1200] 주문\Form1205.Designer.cs">
+      <DependentUpon>Form1205.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1300] 체결\Form1301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1300] 체결\Form1301.Designer.cs">
+      <DependentUpon>Form1301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1300] 체결\Form1302.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1300] 체결\Form1302.Designer.cs">
+      <DependentUpon>Form1302.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1300] 체결\Form1303.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1300] 체결\Form1303.Designer.cs">
+      <DependentUpon>Form1303.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1300] 체결\Form1304.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1300] 체결\Form1304.Designer.cs">
+      <DependentUpon>Form1304.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1400] 잔고\Form1401.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1400] 잔고\Form1401.Designer.cs">
+      <DependentUpon>Form1401.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\[1400] 잔고\Form1402.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\[1400] 잔고\Form1402.Designer.cs">
+      <DependentUpon>Form1402.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[1000] 주식\주식 공통\FormStockCodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1000] 주식\주식 공통\FormStockCodes.Designer.cs">
+      <DependentUpon>FormStockCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[6000] 종목검색\[6100] 전략조회\Form6101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[6000] 종목검색\[6100] 전략조회\Form6101.Designer.cs">
+      <DependentUpon>Form6101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[6000] 종목검색\[6200] 전략검색결과\Form6201.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[6000] 종목검색\[6200] 전략검색결과\Form6201.Designer.cs">
+      <DependentUpon>Form6201.cs</DependentUpon>
+    </Compile>
+    <Compile Include="[6000] 종목검색\[6300] 실시간감시\Form6301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[6000] 종목검색\[6300] 실시간감시\Form6301.Designer.cs">
+      <DependentUpon>Form6301.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\daishin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CPSYSDIBLib">
+      <Guid>{9C31B76A-7189-49A3-9781-3C6DD6ED5AD3}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="CPTRADELib">
+      <Guid>{1F7D5E5A-05AB-4236-B6F3-3D383B09203A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="CPUTILLib">
+      <Guid>{2DA9C35C-FE59-4A32-A942-325EE8A6F659}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="DSCBO1Lib">
+      <Guid>{859343F1-08FD-11D4-8231-00105A7C4F8C}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
